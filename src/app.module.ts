@@ -6,7 +6,6 @@ import { ormConfig } from './orm.config';
 import { BrandModule } from './brand/brand.module';
 import { CategoryModule } from './category/category.module';
 import { ProductModule } from './product/product.module';
-import { FilesModule } from './files/files.module';
 import { APP_FILTER } from '@nestjs/core';
 import { AllExceptionFilter } from './exceptions/exception.filter';
 
@@ -16,7 +15,6 @@ import { AllExceptionFilter } from './exceptions/exception.filter';
     CategoryModule,
     TypeOrmModule.forRootAsync({ useFactory: ormConfig }),
     ProductModule,
-    FilesModule,
   ],
   controllers: [AppController],
   providers: [
