@@ -26,19 +26,22 @@ export class CreateProductDto {
   category_id?: number;
 
   @IsNotEmpty()
+  @IsOptional()
   @IsString()
-  sex: string;
+  sex?: string;
 
   @Type(() => Boolean)
+  @IsOptional()
   @IsNotEmpty()
   @IsBoolean()
-  is_kids: boolean;
+  is_kids?: boolean;
 
   @Type(() => Number)
+  @IsOptional()
   @IsNotEmpty()
   @IsNumber()
   @Min(0)
-  sales_quantity: number;
+  sales_quantity?: number;
 
   @Type(() => File)
   @IsOptional()
