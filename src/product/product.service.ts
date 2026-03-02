@@ -111,7 +111,9 @@ export class ProductService {
 
     // 저장된 파일 경로 추가
     const filePaths: string[] = [];
-    imgs.forEach((img) => filePaths.push(img.path));
+    if (imgs) {
+      imgs.forEach((img) => filePaths.push(img.path));
+    }
     data['file_paths'] = filePaths;
 
     // Product 엔티티를 DB에 저장
